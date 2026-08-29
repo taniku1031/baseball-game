@@ -63,3 +63,80 @@ def decide_result(timing):
                 "result": "ホームラン！！",
                 "type": "home_run"
             }
+        elif number <= 70:
+            return{
+                "result": "三塁打！！",
+                "type": "triple"
+            }   
+        elif number <= 90:
+            return{
+                "result": "二塁打！！",
+                "type": "double"
+            }
+        else:
+            return{
+                "result": "ヒット！！",
+                "type": "single"
+            }
+
+    elif timing == "good":
+        number = random.randint(1, 100)
+
+        if number <= 10:
+            return{
+                "result": "ホームラン！！",
+                "type": "home_run"
+            }
+        elif number <= 20:
+            return{
+                "result": "三塁打！！",
+                "type": "triple"
+            }   
+        elif number <= 40:
+            return{
+                "result": "二塁打！！",
+                "type": "double"
+            }
+        else:
+            return{
+                "result": "ヒット！！",
+                "type": "single"
+            }
+
+    elif timing == "bad":
+        number = random.randint(1, 100)
+
+        if number <= 5:
+            return{
+                "result": "ホームラン！！",
+                "type": "home_run"
+            }
+        elif number <= 10:
+            return{
+                "result": "三塁打！！",
+                "type": "triple"
+            }   
+        elif number <= 20:
+            return{
+                "result": "二塁打！！",
+                "type": "double"
+            }
+        else:
+            return{
+                "result": "ストライク",
+                "type": "strike"
+            }
+
+port = int(
+    os.environ.get("PORT", 8000)
+)
+
+server = HTTPServer(
+    ("0.0.0.0", port),
+    GameHandler
+)
+
+print(f"野球ゲームを起動しました！　ポート：{port}"
+)
+
+server.server_forever()

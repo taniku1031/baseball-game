@@ -1,0 +1,213 @@
+* {
+box-sizing: border-box;
+}
+
+
+body {
+margin: 0;
+
+min-height: 100vh;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+background: #202020;
+
+color: white;
+
+font-family:
+Arial,
+"Noto Sans JP",
+sans-serif;
+}
+
+
+.game {
+width: 800px;
+
+max-width: 95vw;
+
+text-align: center;
+}
+
+
+h1 {
+margin-bottom: 10px;
+}
+
+
+#message {
+height: 55px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+font-size: 26px;
+
+font-weight: bold;
+}
+
+
+/* ゲーム画面 */
+
+#field {
+position: relative;
+
+width: 100%;
+height: 500px;
+
+overflow: hidden;
+
+border: 4px solid white;
+
+border-radius: 20px;
+
+background:
+linear-gradient(
+to bottom,
+#87ceeb 0%,
+#87ceeb 45%,
+#52a447 45%,
+#52a447 100%
+);
+}
+
+
+/* ピッチャー */
+
+#pitcher {
+position: absolute;
+
+top: 65px;
+left: 50%;
+
+transform: translateX(-50%);
+
+font-size: 65px;
+
+z-index: 3;
+}
+
+
+/* ボール */
+
+#ball {
+position: absolute;
+
+top: 120px;
+left: 50%;
+
+transform: translateX(-50%);
+
+font-size: 18px;
+
+display: none;
+
+z-index: 10;
+
+user-select: none;
+}
+
+
+/* バッター */
+
+#batter {
+position: absolute;
+
+bottom: 35px;
+left: 50%;
+
+transform: translateX(-50%);
+
+font-size: 90px;
+
+z-index: 5;
+}
+
+
+/* タイミングゾーン */
+
+#timing-zone {
+position: absolute;
+
+bottom: 155px;
+left: 50%;
+
+transform: translateX(-50%);
+
+width: 230px;
+height: 45px;
+
+border: 3px solid white;
+
+border-radius: 10px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+font-weight: bold;
+
+pointer-events: none;
+}
+
+
+/* ボタン */
+
+.buttons {
+margin-top: 20px;
+
+display: flex;
+justify-content: center;
+
+gap: 20px;
+}
+
+
+button {
+padding: 15px 40px;
+
+border: none;
+
+border-radius: 10px;
+
+font-size: 22px;
+
+font-weight: bold;
+
+cursor: pointer;
+}
+
+
+button:disabled {
+opacity: 0.4;
+
+cursor: not-allowed;
+}
+
+
+#start-button {
+background: #45a049;
+
+color: white;
+}
+
+
+#hit-button {
+background: #e53935;
+
+color: white;
+}
+
+
+/* 成績 */
+
+#score {
+margin-top: 20px;
+
+font-size: 20px;
+
+font-weight: bold;
+}
