@@ -377,12 +377,15 @@ function showResultAnimation(type) {
  }
 
 
- setTimeout(() => {
+setTimeout(() => {
 
- ball.style.display = "none";
+    ball.style.display = "none";
 
- ball.style.transition = "";
+    ball.style.transition = "";
 
- }, 1000);
+    // PLAY BALL! を表示
+    message.textContent = "⚾ PLAY BALL! ⚾";
+
+}, 1000);
 
 }
