@@ -139,4 +139,4 @@ server = HTTPServer(
 print(f"野球ゲームを起動しました！　ポート：{port}"
 )
 
-server.server_forever()
+server.serve_forever()

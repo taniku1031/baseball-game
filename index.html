@@ -15,5 +15,78 @@
 <body>
     <h1>野球ゲーム</h1>
     <p>打撃結果を表示します。</p>
+
+    <!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>野球ゲーム</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+    <main class="game">
+
+        <h1>⚾ 野球ゲーム</h1>
+
+        <div id="message">
+            「投球開始」を押してください！
+        </div>
+
+
+        <div id="field">
+
+            <div id="pitcher">
+                🧍‍♂️
+            </div>
+
+            <div id="timing-zone">
+                HIT ZONE
+            </div>
+
+            <div id="ball">
+                ⚾
+            </div>
+
+            <div id="batter">
+                🏏
+            </div>
+
+        </div>
+
+
+        <div class="buttons">
+
+            <button id="start-button">
+                投球開始
+            </button>
+
+            <button
+                id="hit-button"
+                disabled
+            >
+                打つ！
+            </button>
+
+        </div>
+
+
+        <div id="score">
+            打数：0　安打：0　打率：0.000
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+
 </body>
 </html>

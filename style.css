@@ -28,7 +28,14 @@ width: 800px;
 
 max-width: 95vw;
 
+height: 100vh;
+
 text-align: center;
+
+display: flex;
+flex-direction: column;
+
+justify-content: center;
 }
 
 

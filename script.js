@@ -44,6 +44,28 @@ hitButton.addEventListener(
  hit
 );
 
+/* =========================
+ キーボード操作
+========================= */
+
+document.addEventListener("keydown", function(event) {
+
+    console.log("キー:", event.code);
+
+    if (event.code === "Space") {
+
+        event.preventDefault();
+        startPitch();
+
+    } else if (event.code === "Enter") {
+
+        event.preventDefault();
+        hit();
+
+    }
+
+});
+
 
 /* =========================
  投球開始
